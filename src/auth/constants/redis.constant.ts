@@ -1,0 +1,4 @@
+export const RedisConstants = {
+  REDIS_EXPIRE_TIME_REFRESH_TOKEN: 3600,
+  REDIS_KEY_REFRESH_TOKEN: 'REDIS_KEY_REFRESH_TOKEN'// in seconds
+};
