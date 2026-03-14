@@ -30,6 +30,7 @@ export class CreateQueueServiceUseCase {
       company,
       name: dto.name,
       description: dto.description,
+      last_id: uuid(),
     });
 
     return await this.queueRepo.save(queueService);

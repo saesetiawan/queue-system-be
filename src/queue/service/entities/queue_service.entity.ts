@@ -27,6 +27,9 @@ export class QueueService {
   @Column()
   name: string;
 
+  @Column({ type: 'varchar', length: 60 })
+  last_id: string;
+
   @Column({ type: 'text', nullable: true })
   description: string;
 

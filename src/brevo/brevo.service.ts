@@ -60,7 +60,7 @@ export class EmailService {
       return data;
     } catch (error) {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
-      const msg = error?.response?.data || error.message;
+      const msg = error?.response?.data?.message || error.message;
       this.logger.error(`❌ Failed to send email: ${msg}`);
       throw error;
     }

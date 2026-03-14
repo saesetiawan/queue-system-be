@@ -8,6 +8,7 @@ import { CompanyModule } from './company/company.module';
 import { QueueModule } from './queue/queue.module';
 import { RedisMQModule } from './redisMQ/redismq.module';
 import { WorkerModule } from './worker/worker.module';
+import { QueueProcessModule } from './queue/process/queue_process.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { WorkerModule } from './worker/worker.module';
     BlogModule,
     CompanyModule,
     QueueModule,
+    QueueProcessModule,
   ],
   controllers: [],
   providers: [],

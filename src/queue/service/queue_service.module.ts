@@ -9,7 +9,6 @@ import { CreateQueueServiceUseCase } from './usecases/create_queue_service.useca
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { QueueService } from './entities/queue_service.entity';
 import { CompanyModule } from '../../company/company.module';
-
 @Module({
   imports: [
     AuthModule,

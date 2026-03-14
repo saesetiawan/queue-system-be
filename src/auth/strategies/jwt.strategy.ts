@@ -15,9 +15,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-  validate(payload: JwtPayload) {
+  validate(payload: JwtPayload): JwtPayload {
     // payload = isi token yang di-sign
     // misal { sub: userId, email: xxx }
-    return { email: payload.email };
+    return { email: payload.email, companyId: payload.companyId };
   }
 }

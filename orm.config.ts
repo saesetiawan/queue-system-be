@@ -12,9 +12,8 @@ type Ssl = {
 const ssl: Ssl = {};
 if (process.env.DB_SSL === 'true')
   ssl.ca = fs.readFileSync(`./ssl/${process.env.DB_IS_SECURE_CA}`);
-
 export default new DataSource({
-  type: 'postgres',
+  type: 'mariadb',
   host: process.env.DB_HOST,
   port: parseInt(process.env.DB_PORT || '3306', 10),
   username: process.env.DB_USER,
@@ -27,6 +26,5 @@ export default new DataSource({
   ],
   migrations: [__dirname + '/src/migrations/*{.ts,.js}'],
   synchronize: false,
-  schema: 'public',
   ssl: process.env.DB_SSL === 'true' ? ssl : undefined,
 });

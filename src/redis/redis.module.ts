@@ -15,7 +15,6 @@ import { RedisService } from './redis.service';
           password: process.env.REDIS_PASSWORD || undefined,
           maxRetriesPerRequest: null,
         });
-
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
         client.on('connect', () => console.log('✅ Redis connected'));
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
